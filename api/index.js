@@ -197,7 +197,7 @@ run().catch(console.dir);
 
 
 app.get("/", (req, res) => {
-  res.send("Server is up and running!");
+  res.send("Server is ready to go!");
 });
 
 module.exports = app;
