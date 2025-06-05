@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/index.js", "use": "@vercel/node" }],
+  "builds": [{ "src": "api/**/*.js", "use": "@vercel/node" }],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/index.js"
-    }
+    { "src": "/api/tasks/bid", "dest": "/api/tasks/bid.js" },
+    { "src": "/api/tasks/([^/]+)", "dest": "/api/tasks/[id].js" },
+    { "src": "/api/tasks", "dest": "/api/tasks/index.js" },
+    { "src": "/api/seed", "dest": "/api/seed.js" }
   ]
 }
